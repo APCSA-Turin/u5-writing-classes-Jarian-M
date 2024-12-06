@@ -1,11 +1,64 @@
 public class Main7 {
-    /*public static double cArea(double radius) {
-        return (Math.pow(radius,2) * 3.1415);
-    } */
-    public static void main (String[] args) {
-        WordGen newGen = new WordGen("$&", "PassWord", "21", "Jarian");
-        newLogin login = new newLogin(newGen);
-        System.out.println(login.getPass());
-        System.out.println(login.getUser());
-    }
+    public static void main(String[] args) {
+        System.out.println("--- first student ---");
+        Student s1 = new Student("Adam");
+        System.out.println(s1.studentInfo());
+        System.out.println(Student.classInfo());
+        System.out.println();
+        s1.addPoints(20);
+        System.out.println(s1.studentInfo());
+        System.out.println(Student.classInfo());
+        System.out.println();
+        s1.addPoints(30);
+        System.out.println(s1.studentInfo());
+        System.out.println(Student.classInfo());
+
+        System.out.println("\n--- second student ---");
+        Student s2 = new Student("Barb");
+        System.out.println(s2.studentInfo());
+        System.out.println(Student.classInfo());
+        System.out.println();
+        s2.addPoints(15);
+        System.out.println(s2.studentInfo());
+        System.out.println(Student.classInfo());
+        System.out.println();
+        s2.addPoints(30);
+        System.out.println(s2.studentInfo());
+        System.out.println(Student.classInfo());
+        System.out.println();
+        s2.addPoints(20);
+        System.out.println(s2.studentInfo());
+        System.out.println(Student.classInfo());
+     
+        System.out.println("\n--- third student ----");
+        Student s3 = new Student("Charles");
+        System.out.println(s3.studentInfo());
+        System.out.println(Student.classInfo());
+        System.out.println();
+        s3.addPoints(40);
+        System.out.println(s3.studentInfo());
+        System.out.println(Student.classInfo());
+        System.out.println();
+        s3.addPoints(35);
+        System.out.println(s3.studentInfo());
+        System.out.println(Student.classInfo());
+        System.out.println();
+        s3.addPoints(25);
+        System.out.println(s3.studentInfo());
+        System.out.println(Student.classInfo());
+        System.out.println();
+
+        System.out.println("--- adding to Barb ---");
+   s2.addPoints(10);
+   System.out.println(s2.studentInfo());
+   System.out.println(Student.classInfo());
+   System.out.println();
+   s2.addPoints(20);
+   System.out.println(s2.studentInfo());
+   System.out.println(Student.classInfo());
+   System.out.println();
+   s2.addPoints(15);
+   System.out.println(s2.studentInfo());
+   System.out.println(Student.classInfo());
+    }        
 }
