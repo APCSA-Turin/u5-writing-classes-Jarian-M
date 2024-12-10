@@ -2,11 +2,13 @@ public class Cars {
     private static int totalMiles = 0;
     private static int longestDrive = 0;
     private static int totalCars = 0;
+    private int localLongest = 0;
     private int miles = 0;
     private String name = "";
 
     public Cars(String name) {
         miles = 0;
+        localLongest = 0;
         this.name = name;
         totalCars++;
     }
@@ -31,12 +33,18 @@ public class Cars {
         return name;
     }
 
+    public int getCarLongest() {
+        return localLongest;
+    }
+
     public void drive(int numMiles) {
-        miles += numMiles;
+        miles = numMiles;
         totalMiles += numMiles;
+        if(numMiles > localLongest) {
+            localLongest = numMiles;
+        }
         if(numMiles > longestDrive) {
             longestDrive = numMiles;
         }
     }
-
 }
